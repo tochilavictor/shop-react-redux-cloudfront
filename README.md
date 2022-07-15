@@ -1,3 +1,7 @@
+
+CloudFront URL https://d1bmxna8i2i9rw.cloudfront.net/
+S3 Bucket URL http://cloudx-aws-auto.s3-website-us-east-1.amazonaws.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
