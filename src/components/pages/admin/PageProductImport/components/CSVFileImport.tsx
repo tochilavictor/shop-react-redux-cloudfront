@@ -33,7 +33,7 @@ function getStatusAlertParams(statusCode: any): {
     case 401:
       title = 'Unauthorized';
       message =
-        'Make sure you add Authorization header to api call, please set token with value "dG9jaGlsYXZpY3RvcjpURVNUX1BBU1NXT1JE" into local storage';
+        'Make sure you add Authorization header to api call, please set token with value "Basic dG9jaGlsYXZpY3RvcjpURVNUX1BBU1NXT1JE" into local storage';
       severity = 'error';
       break;
     case 403:
@@ -81,7 +81,7 @@ export default function CSVFileImport({ url, title }: CSVFileImportProps) {
           name: encodeURIComponent(file.name),
         },
         headers: {
-          Authorization: `Basic ${authorization_token}`,
+          Authorization: authorization_token ?? '',
         },
       });
       setAlertStatusCode(response.status);
